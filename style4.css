@@ -1,0 +1,171 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.heck {
+    width: 100%;
+    height: 5vh;
+    background: rgb(146, 62, 62);
+    color: white;
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 0 50px;
+}
+
+.header {
+    width: 100%;
+    height: 13vh;
+    background: #E8CFCB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 10px gray;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+
+.logo h1 {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    margin-left: 20px;
+}
+
+.logo p {
+    font-family: 'Dancing Script', 'Brush Script MT', cursive;
+    font-size: 20px;
+    color: #555;
+    margin-left: 40px;
+    letter-spacing: 1px;
+}
+
+.navbar {
+    margin-right: 50px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: rgb(207, 104, 104);
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+section {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    position: relative;
+    color: white;
+}
+.banner {
+    background: url('banner-2.png') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    animation: fadeUp 2s ease forwards;
+    margin: 150px;
+}
+
+.banner-content h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeUp 2s ease forwards;
+}
+
+.banner-content h1 {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: 80px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    margin-right: 200px;
+    opacity: 0;
+    animation: fadeUp 2s ease forwards;
+}
+
+.banner-content p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeUp 2s ease forwards;
+    animation-delay: 0.5s;
+    margin-right: 200px;
+}
+
+.banner-content button {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border: none;
+    background: #C48A8A;
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeUp 2s ease forwards;
+    animation-delay: 1s;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-right: 280px;
+}
+
+.banner-content button:hover {
+    background: #a86a6a;
+    transform: scale(1.05);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
